@@ -1,0 +1,260 @@
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo{
+    width: 150px;
+}
+
+.navbar .navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 18px;
+    color: #49557e;
+}
+
+.navbar-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar button{
+    background: transparent;
+    border: 1px solid tomato;
+    color: #49557e;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.navbar button:hover{
+    background-color: antiquewhite;
+}
+
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar-menu li{
+    cursor: pointer;
+}
+
+.navbar-search-icon{
+    position: relative;
+    cursor: pointer;
+}
+.navbar-search-icon:hover{
+    cursor: pointer;
+}
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+/* --- Search Bar Styling --- */
+.navbar-search-bar {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  z-index: 20;
+  background: #fff;
+  border: 1.5px solid #ffe5e0;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(255, 99, 71, 0.13);
+  padding: 18px 18px 10px 18px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.25s;
+}
+
+.navbar-search-input {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1.5px solid #ffd6c9;
+  font-size: 16px;
+  outline: none;
+  background: #fff8f6;
+  transition: border 0.2s;
+  box-shadow: 0 1px 4px rgba(255,99,71,0.07);
+}
+
+.navbar-search-input:focus {
+  border: 1.5px solid tomato;
+  background: #fff;
+}
+
+/* --- Search Results Dropdown --- */
+.navbar-search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(255,99,71,0.08);
+}
+
+.navbar-search-results li {
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #49557e;
+  transition: background 0.15s, color 0.15s;
+  margin-bottom: 2px;
+}
+
+.navbar-search-results li:last-child {
+  margin-bottom: 0;
+}
+
+.navbar-search-results li:hover {
+  background: #ffe5e0;
+  color: tomato;
+}
+
+.navbar-search-noresult {
+  color: #999;
+  font-size: 15px;
+  padding: 8px 0 0 2px;
+  text-align: center;
+}
+
+/* --- Search Icon --- */
+.navbar-search-icon img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s;
+}
+
+.navbar-search-icon img:hover {
+  transform: scale(1.1) rotate(-8deg);
+}
+
+/* --- Animation for search bar appearance --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 768px){
+    
+    .navbar .navbar-menu{
+        display: none;
+    }
+}
+
+@media (max-width: 900px){
+    .navbar .logo{
+        width: 120px;
+    }
+    .navbar .navbar-menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1050px){
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+}
+
+.navbar-profile{
+    position: relative;
+}
+.navbar-profile:hover{
+    cursor: pointer;
+}
+
+.nav-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    outline: 2px solid white;
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown img{
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover{
+    color: tomato;
+}
+
+.navbar-search-cancel {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  font-size: 20px;
+  color: #bbb;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 21;
+  transition: color 0.2s;
+  user-select: none;
+}
+.navbar-search-cancel:hover {
+  color: tomato;
+}
+
+

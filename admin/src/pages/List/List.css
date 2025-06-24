@@ -1,0 +1,117 @@
+.list-table {
+    margin: 40px auto;
+    width: 92%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 32px rgba(255,99,71,0.13);
+    overflow: hidden;
+    border: 1.5px solid #ffe5e0;
+}
+
+.list-table-format {
+    display: grid;
+    grid-template-columns: 0.7fr 2fr 1.2fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 24px 32px;
+    font-size: 17px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+    background: #fff;
+}
+
+.list-table-format.title {
+    background-color: #fff5f1;
+    font-size: 19px;
+    font-weight: 700;
+    color: #444;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: 2px solid #ffd6c9;
+    letter-spacing: 0.5px;
+}
+
+.list-table-format img {
+    width: 56px;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(255,99,71,0.10);
+    margin: auto;
+    display: block;
+    background: #fff8f6;
+    padding: 4px;
+}
+
+.list-table-format:nth-child(even):not(.title) {
+    background: #fff8f6;
+}
+
+.list-table-format:hover:not(.title) {
+    background: #fff0ed;
+}
+
+.list-table-format p {
+    flex: 1;
+    text-align: center;
+    color: #333;
+    margin: 0;
+    font-size: 17px;
+}
+
+.list-table-format b {
+    flex: 1;
+    text-align: center;
+    margin-left: 12px;
+}
+
+.cursor {
+    cursor: pointer;
+    color: #ff4d4f;
+    font-size: 22px;
+    font-weight: bold;
+    transition: color 0.2s, transform 0.2s, background 0.2s;
+    user-select: none;
+    border-radius: 50%;
+    padding: 2px 10px;
+    background: transparent;
+}
+.cursor:hover {
+    color: #fff;
+    background: #ff4d4f;
+    transform: scale(1.18);
+}
+
+.list.add.flex-col > p {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #222;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .list-table-format {
+        grid-template-columns: 1fr 2fr 1fr 1fr 0.7fr;
+        font-size: 13px;
+        padding: 12px 8px;
+    }
+    .list-table-format img {
+        width: 36px;
+    }
+    .list.add.flex-col > p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .list-table-format {
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 10px;
+        font-size: 12px;
+        padding: 10px 4px;
+    }
+    .list-table-format.title {
+        display: none;
+    }
+}
