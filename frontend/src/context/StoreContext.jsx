@@ -9,7 +9,7 @@ export const storeContext = createContext(null)
 const StoreContextProvider = (props) =>{
 
     const [cartItems , setCartItems] = useState({});
-    const url = "https://food-ordering-app-backend-quph.onrender.com/"
+    const url = "https://food-ordering-app-backend-quph.onrender.com"
     const[token,setToken] = useState("");
     const[food_list , setFoodList] = useState([]);
 
