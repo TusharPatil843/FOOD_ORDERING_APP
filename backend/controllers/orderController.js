@@ -6,7 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // placing user order for frontend
 export const placeOrder = async (req, res) => {
-    const front_url = "http://localhost:5173";
+    const front_url = "https://tomato-74r1.onrender.com"; // <-- use your deployed frontend URL
     try {
         const newOrder = new Order({
             userId: req.body.userId,
